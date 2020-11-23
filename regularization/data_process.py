@@ -66,11 +66,11 @@ def income_cut(x):
 
 def data_process():
     # 导入数据
-    train_abbr = pd.read_csv("dataset/happiness/happiness_train_abbr.csv", encoding='ISO-8859-1')
-    train = pd.read_csv("dataset/happiness/happiness_train_complete.csv", encoding='ISO-8859-1')
-    test_abbr = pd.read_csv("dataset/happiness/happiness_test_abbr.csv", encoding='ISO-8859-1')
-    test = pd.read_csv("dataset/happiness/happiness_test_complete.csv", encoding='ISO-8859-1')
-    test_sub = pd.read_csv("dataset/happiness/happiness_submit.csv", encoding='ISO-8859-1')
+    train_abbr = pd.read_csv("../dataset/happiness/happiness_train_abbr.csv", encoding='ISO-8859-1')
+    train = pd.read_csv("../dataset/happiness/happiness_train_complete.csv", encoding='ISO-8859-1')
+    test_abbr = pd.read_csv("../dataset/happiness/happiness_test_abbr.csv", encoding='ISO-8859-1')
+    test = pd.read_csv("../dataset/happiness/happiness_test_complete.csv", encoding='ISO-8859-1')
+    test_sub = pd.read_csv("../dataset/happiness/happiness_submit.csv", encoding='ISO-8859-1')
 
     # 查看label分布
     y_train_ = train["happiness"]

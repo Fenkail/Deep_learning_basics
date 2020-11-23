@@ -1,11 +1,10 @@
 import numpy as np
 import time
 import xgboost as xgb
-from sklearn.preprocessing import OneHotEncoder
-from sklearn.model_selection import KFold, RepeatedKFold
-from score import myFeval
+from sklearn.model_selection import KFold
+from regularization.score import myFeval
 from sklearn.metrics import mean_squared_error
-from data_process import data_process
+from regularization.data_process import data_process
 
 s = time.time()
 X_train, y_train, X_test, train_len, test_len = data_process()
@@ -19,7 +18,7 @@ xgb_params = {"booster": 'gbtree',
               'objective': 'reg:linear',
               'eval_metric': 'rmse',
               'silent': True,
-              'lambda': 0.5
+              'lambda': 1
               }
 folds = KFold(n_splits=5, shuffle=True, random_state=2018)
 oof_xgb = np.zeros(train_len)

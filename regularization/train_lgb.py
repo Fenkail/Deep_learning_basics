@@ -1,8 +1,8 @@
 import numpy as np
 from sklearn.metrics import mean_squared_error
-from sklearn.model_selection import KFold, RepeatedKFold
+from sklearn.model_selection import KFold
 import lightgbm as lgb
-from data_process import data_process
+from regularization.data_process import data_process
 import time
 
 s = time.time()
